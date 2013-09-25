@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<overlay id="colorchecker_niquelao"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/x-javascript" src="colorchecker-robot.js"></script>
+
+</overlay>
