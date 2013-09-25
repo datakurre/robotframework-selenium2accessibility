@@ -6,8 +6,8 @@
     <Description about="urn:mozilla:install-manifest">
 
         <!-- Required Items -->
-        <em:id>wavetoolbar-robot@plone.org</em:id>
-        <em:name>WAVE Toolbar - Robot Support</em:name>
+        <em:id>accessibility@robot</em:id>
+        <em:name>Accessibility tool bindings for Robot Framework</em:name>
         <em:version>1.1.8</em:version>
 
         <em:targetApplication>
@@ -20,8 +20,8 @@
 
         <!-- Optional Items -->
         <em:creator>Asko Soukka</em:creator>
-        <em:description>Injects public javascript bindings for The WAVE toolbar by WebAIM for test automation purposes.</em:description>
-        <em:homepageURL>http://plone.org/</em:homepageURL>
+        <em:description>Injects public javascript bindings various accessibility checking extensions to support automated accessibility testing with Robot Framework.</em:description>
+        <em:homepageURL>http://pypi.python.org/pypi/robotframework-selenium2accessibility</em:homepageURL>
         <em:iconURL>chrome://wavetoolbar/skin/addons_icon.png</em:iconURL>
 
     </Description>

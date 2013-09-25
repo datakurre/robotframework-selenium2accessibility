@@ -3,8 +3,6 @@
 Library  Selenium2Library
 
 Library  Accessibility.Image
-Library  Accessibility.WaveToolbar
-Library  Accessibility.ContrastChecker
 
 *** Variables ***
 
@@ -17,7 +15,7 @@ Open accessibility test browser
     [Documentation]  Open Firefox with a11y testing tools installed.
     Open browser  about:  browser=firefox  ff_profile_dir=${FF_PROFILE_DIR}
 
-Crop accessibility screenshot
+Crop accessibility issue screenshot
     [Documentation]  Crop the captured page screenshot with the given filename
     ...              using the bounding box of the given element ids.
     [Arguments]  ${filename}  @{ids}
@@ -63,9 +61,9 @@ Crop accessibility screenshot
     ...    })();
     Crop image file  ${OUTPUT_DIR}  ${filename}  @{dimensions}
 
-Capture and crop accessibility page screenshot
+Capture and crop accessibility issue screenshot
     [Documentation]  Capture and crop page screenshot using the given filename
     ...              and the bounding box of the given element ids.
     [Arguments]  ${filename}  @{locators}
     Capture page screenshot  ${filename}
-    Crop accessibility screenshot  ${filename}  @{locators}
+    Crop accessibility issue screenshot  ${filename}  @{locators}

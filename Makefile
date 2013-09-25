@@ -1,9 +1,9 @@
-src/WAVELibrary/profile/extensions/wavetoolbar-robot@plone.org.xpi:\
-        wavetoolbar-robot/install.rdf\
-        wavetoolbar-robot/chrome.manifest\
-        wavetoolbar-robot/chrome/content/wavetoolbar-robot.xul\
-        wavetoolbar-robot/chrome/content/wavetoolbar-robot.js\
-        wavetoolbar-robot/chrome/content/colorchecker-robot.xul\
-        wavetoolbar-robot/chrome/content/colorchecker-robot.js
-	cd wavetoolbar-robot && zip ../src/WAVELibrary/profile/extensions/wavetoolbar-robot@plone.org.xpi -r *
+src/Accessibility/profile/extensions/accessibility-robot@plone.org.xpi:\
+        accessibility-robot/install.rdf\
+        accessibility-robot/chrome.manifest\
+        accessibility-robot/chrome/content/accessibility-robot.xul\
+        accessibility-robot/chrome/content/accessibility-robot.js\
+        accessibility-robot/chrome/content/colorchecker-robot.xul\
+        accessibility-robot/chrome/content/colorchecker-robot.js
+	cd accessibility-robot && zip ../src/WAVELibrary/profile/extensions/accessibility-robot@plone.org.xpi -r *
 

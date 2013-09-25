@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="robotframework-wavelibrary",
-    version='0.1.4.dev0',
-    description="Robot Framework resources for automating WebAIM Wave Toolbar",
+    name="robotframework-selenium2accessibility",
+    version='0.2.0.dev0',
+    description="Robot Framework resources for automating accessibility tools",
     long_description=(open("README.rst").read() + "\n" +
                       open("CHANGES.txt").read()),
     # Get more strings from
@@ -14,7 +14,7 @@ setup(
     keywords="",
     author="Asko Soukka",
     author_email="asko.soukka@iki.fi",
-    url="https://github.com/datakurre/robotframework-wavelibrary/",
+    url="https://github.com/datakurre/robotframework-selenium2accessibility/",
     license="GPL",
     packages=find_packages("src", exclude=["ez_setup"]),
     package_dir={"": "src"},

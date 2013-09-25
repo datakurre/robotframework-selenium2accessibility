@@ -15,7 +15,7 @@ class Accessibility(object):
     def import_Accessibility_resources(self):
         """Import Accessibility user keywords.
         """
-        BuiltIn().import_resource('Accessibility/keywords.robot')
+        BuiltIn().import_resource('Accessibility/accessibility.robot')
 
 
 class WAVEToolbar(object):
