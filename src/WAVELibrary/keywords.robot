@@ -102,7 +102,7 @@ Capture WAVE error
 
 Crop WAVE error
     [Documentation]  Crop the captured WAVE Toolbar error image saved
-    ...              with the given filename using the bouding box of the
+    ...              with the given filename using the bounding box of the
     ...              given element ids.
     [Arguments]  ${filename}  @{ids}
     ${ids} =  Convert to string  ${ids}
