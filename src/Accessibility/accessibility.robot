@@ -12,25 +12,32 @@ ${ERROR_CROP_MARGIN}  50
 *** Keywords ***
 
 Open accessibility test browser
-    [Documentation]  Open Firefox with a11y testing tools installed.
+    [Documentation]  Open Firefox with a11y add-ons pre-installed.
     Open browser  about:  browser=firefox  ff_profile_dir=${FF_PROFILE_DIR}
 
 Crop accessibility issue screenshot
-    [Documentation]  Crop the captured page screenshot with the given filename
-    ...              using the bounding box of the given element ids.
+    [Documentation]  Crops the given ``filename`` to
+    ...              match the combined bounding box of the
+    ...              elements matching the given ``locators``.
+    ...
+    ...              Requires at least two arguments
+    ...              (``filename`` and at least one ``locator``).
     [Arguments]  ${filename}  @{ids}
     ${ids} =  Convert to string  ${ids}
     ${ids} =  Replace string using regexp  ${ids}  u'  '
     @{dimensions} =  Execute Javascript
     ...    return (function(){
-    ...        var ids = ${ids}, i, target, box, style, offset={};
+    ...        var ids = ${ids}, i, target, box, offset = {};
     ...        var left = null, top = null, width = null, height = null;
     ...        for (i = 0; i <= ids.length; i++) {
     ...            if (i < ids.length) {
     ...                target = window.document.getElementById(ids[i]);
-    ...            } else {
+    ...            } else if (window.document.getElementsByClassName(
+    ...                           'wave4tooltip').length > 0) {
     ...                target = window.document.getElementsByClassName(
-    ...                    'wave4tooltip')[0];
+    ...                    'wave4tooltip')[0];  /* WAVE Toolbar tip */
+    ...            } else {
+    ...                continue;
     ...            }
     ...            box = target.getBoundingClientRect();
     ...            offset.left = Math.round(box.left + window.pageXOffset);
@@ -62,8 +69,12 @@ Crop accessibility issue screenshot
     Crop image file  ${OUTPUT_DIR}  ${filename}  @{dimensions}
 
 Capture and crop accessibility issue screenshot
-    [Documentation]  Capture and crop page screenshot using the given filename
-    ...              and the bounding box of the given element ids.
+    [Documentation]  Captures a page screenshot with the given ``filename`` and
+    ...              crops it to match the combined bounding box of the
+    ...              elements matching the given ``locators``.
+    ...
+    ...              Requires at least two arguments
+    ...              (``filename`` and at least one ``locator``).
     [Arguments]  ${filename}  @{locators}
     Capture page screenshot  ${filename}
     Crop accessibility issue screenshot  ${filename}  @{locators}

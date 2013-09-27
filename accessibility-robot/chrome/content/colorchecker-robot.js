@@ -39,7 +39,15 @@ var showColorCheckError = function(idx) {
     sidebar.bio_niqueladas_colorCheck.selectElem(idx);
 };
 
-var ColorCheckorRobotObserver = {
+var clearColorCheckErrors = function() {
+    var sidebar;
+    sidebar = document.getElementById("sidebar").contentWindow;
+    sidebar.bio_niqueladas_colorCheck.eliminaSeleccion();
+    sidebar.document.getElementById("cargador")
+        .parentNode.view.selection.clearSelection();
+};
+
+var ColorCheckerRobotObserver = {
     QueryInterface: XPCOMUtils.generateQI([Ci.nsIObserver,
         Ci.nsISupportsWeakReference]),
     observe: function(subject, topic, data) {
@@ -49,11 +57,13 @@ var ColorCheckorRobotObserver = {
                             .colorchecker_run=runColorCheck;
             XPCNativeWrapper.unwrap(subject)
                             .colorchecker_show=showColorCheckError;
+            XPCNativeWrapper.unwrap(subject)
+                            .colorchecker_clear=clearColorCheckErrors;
         }
     }
 };
 
 var observerService = Cc["@mozilla.org/observer-service;1"]
     .getService(Ci.nsIObserverService);
-observerService.addObserver(ColorCheckorRobotObserver,
+observerService.addObserver(ColorCheckerRobotObserver,
     "content-document-global-created", true);
