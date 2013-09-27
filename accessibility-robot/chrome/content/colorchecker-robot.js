@@ -15,6 +15,7 @@ var runColorCheck = function(callback) {
     }
 
     sidebar.document.getElementById("optLevels").selectedIndex = 1;  // 1 = AAA
+    sidebar.document.getElementById("optLevels").selectedIndex = 0;  // 0 = AA
     sidebar.bio_niqueladas_colorCheck.eliminaSeleccion();
     sidebar.bio_niqueladas_colorCheck.loading(1);
     sidebar.bio_niqueladas_colorCheck.jarl(2);  // 1 == WCAG 1, 2 = WCAG 2
