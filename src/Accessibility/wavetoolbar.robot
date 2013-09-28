@@ -34,7 +34,8 @@ Check WAVE accessibility errors
     Hide WAVE errors, features and alerts
 
     ${url} =  Get location
-    Should be equal  ${errors}  ${EMPTY}  Wave reported errors for ${url}
+    Should be equal  ${errors}  ${EMPTY}
+    ...    WAVE Toolbar reported errors for ${url}
 
 Count WAVE accessibility errors
     [Documentation]  Check the current page for accessibility errors (or
@@ -102,7 +103,7 @@ Log WAVE errors
     [Arguments]  ${errors}  ${capture}=${EMPTY}
     Set tags  Accessibility issues
     Capture page screenshot
-    Run keyword if  ${capture}  Capture WAVE errors
+    Run keyword if  ${capture}  Capture visible WAVE errors
     Log  ${errors}  level=ERROR
 
 Get WAVE errors
@@ -118,20 +119,20 @@ Get WAVE errors
     ${source} =  Get lines matching regexp  ${source}  ^ERROR:.*
     [return]  ${source}
 
-Capture WAVE errors
+Capture visible WAVE errors
     [Documentation]  Try to take a cropped screen capture of each currently
     ...              visible WAVE toolbar reported error.
     ...
     ...              This keyword requires that
     ...              WAVE errors, features and alerts
     ...              are visible when this keyword is being called.
-    @{ids} =  Tag WAVE errors
+    @{ids} =  Tag visible WAVE errors
     ${keyword} =  Register keyword to run on failure  No operation
     :FOR  ${id}  IN  @{ids}
-    \  Run keyword and ignore error  Capture WAVE error  ${id}
+    \  Run keyword and ignore error  Capture visible WAVE error  ${id}
     Register keyword to run on failure  ${keyword}
 
-Tag WAVE errors
+Tag visible WAVE errors
     [Documentation]  Tag each WAVE toolbar reported error with a unique id
     ...              and return the ids to ease access to the errors.
     ...
@@ -154,7 +155,7 @@ Tag WAVE errors
     ...    })();
     [Return]  ${errors}
 
-Capture WAVE error
+Capture visible WAVE error
     [Documentation]  Try to take a screen capture of a currently visible
     ...              WAVE toolbar reported error tagged with the given id.
     ...
