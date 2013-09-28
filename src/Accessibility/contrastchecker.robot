@@ -16,7 +16,7 @@ Check color contrast issues
     ...                performing WCAG Contrast checker analysis.
     ...
     ...              * ``capture``, which does its best to capture cropped \
-    ...                page screenshots of all accessibility errors detected
+    ...                page screenshots of all accessibility errors detected \
     ...                by WCAG Contrast checker.
     [Arguments]      ${url}=${EMPTY}  ${capture}=${EMPTY}
     ${is_url} =  Convert to boolean  ${url}
@@ -45,7 +45,7 @@ Count color contrast issues
     ...                performing WCAG Contrast checker analysis.
     ...
     ...              * ``capture``, which does its best to capture cropped \
-    ...                page screenshots of all accessibility errors detected
+    ...                page screenshots of all accessibility errors detected \
     ...                by WCAG Contrast checker.
     [Arguments]      ${url}=${EMPTY}  ${capture}=${EMPTY}
     ${is_url} =  Convert to boolean  ${url}
