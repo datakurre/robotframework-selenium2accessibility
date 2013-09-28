@@ -25,7 +25,7 @@ Check color contrast issues
     Run keyword if  ${is_url}  Go to  ${url}
 
     ${errors} =  Get Contrast Checker error count
-    Run keyword if  ${is_capture}  Capture visible contrast Checker errors
+    Run keyword if  ${is_capture}  Capture contrast Checker errors
 
     ${url} =  Get location
     Should be true  ${errors} < 2
@@ -54,7 +54,7 @@ Count color contrast issues
     Run keyword if  ${is_url}  Go to  ${url}
 
     ${errors} =  Get Contrast Checker error count
-    Run keyword if  ${is_capture}  Capture visible contrast Checker errors
+    Run keyword if  ${is_capture}  Capture contrast Checker errors
 
     [return]  ${errors}
 
@@ -67,13 +67,12 @@ Get Contrast Checker error count
     ...    })(arguments[0]);
     [return]  ${errors}
 
-Capture visible Contrast Checker errors
+Capture Contrast Checker errors
     [Documentation]  Execute WCAG Contrast checker analysis for the current
     ...              page and try to take screenshots of each detected issue.
     ${errors} =  Get Contrast Checker error count
     :FOR  ${index}  IN RANGE  ${errors}
     \      Show Contrast Checker error  ${index}
-
     Capture page screenshot
 
     @{ids} =  Tag visible contrast checker errors
