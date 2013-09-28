@@ -1,17 +1,20 @@
 Changelog
 =========
 
-0.2.1 (unreleased)
+0.2.1 (2013-09-28)
 ------------------
 
-- Nothing changed yet.
+- Updated changelog.
 
 
 0.2.0 (2013-09-28)
 ------------------
 
-- Nothing changed yet.
+- Renamed to robotframework-selenium2accessibility. Some WAVE-related
+  keywords were renamed to avoid future namespace collision in keyword
+  names. See docs for current keywords.
 
+- Added WCAG Contrast checker, integration and keywords.
 
 0.1.3 (2013-05-26)
 ------------------
