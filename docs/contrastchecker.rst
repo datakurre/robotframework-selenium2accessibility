@@ -23,6 +23,7 @@ Keywords
 
 .. robot_keywords::
    :source: Accessibility:contrastchecker.robot
+   :style: minimal
 
 Source
 ------

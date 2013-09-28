@@ -15,6 +15,7 @@ Common keywords
 
 .. robot_keywords::
    :source: Accessibility:accessibility.robot
+   :style: minimal
 
 Source
 ------
