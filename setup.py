@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="robotframework-selenium2accessibility",
-    version='0.2.1',
+    version='0.2.2.dev0',
     description="Robot Framework resources for automating accessibility tools",
     long_description=(open("README.rst").read() + "\n" +
                       open("CHANGES.txt").read()),
