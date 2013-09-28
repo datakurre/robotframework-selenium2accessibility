@@ -19,7 +19,7 @@ Check WAVE accessibility errors
     ...                detected by WAVE Toolbar
     ...
     ...              * ``capture``, which does its best to capture cropped \
-    ...                page screenshots of all accessibility errors detected
+    ...                page screenshots of all accessibility errors detected \
     ...                by WAVE Toolbar
     [Arguments]      ${url}=${EMPTY}  ${log}=${EMPTY}  ${capture}=${EMPTY}
     ${is_url} =  Convert to boolean  ${url}
@@ -52,7 +52,7 @@ Count WAVE accessibility errors
     ...                detected by WAVE Toolbar
     ...
     ...              * ``capture``, which does its best to capture cropped \
-    ...                page screenshots of all accessibility errors detected
+    ...                page screenshots of all accessibility errors detected \
     ...                by WAVE Toolbar
     [Arguments]      ${url}=${EMPTY}  ${log}=${EMPTY}  ${capture}=${EMPTY}
     ${is_url} =  Convert to boolean  ${url}
@@ -90,7 +90,7 @@ Log WAVE errors if any
     ...              Optional keyword arguments:
     ...
     ...              * ``capture``, which does its best to capture cropped \
-    ...                page screenshots of all accessibility errors detected
+    ...                page screenshots of all accessibility errors detected \
     ...                by WAVE Toolbar
     [Arguments]  ${errors}  ${capture}=${EMPTY}
     ${found} =  Convert to boolean  ${errors}
