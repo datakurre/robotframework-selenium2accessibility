@@ -15,7 +15,7 @@ source_encoding = 'utf-8'
 master_doc = 'index'
 
 # General information about the project.
-project = u'robotframework-wavelibrary'
+project = u'robotframework-selenium2accessibility'
 copyright = u'Asko Soukka <asko.soukka@iki.fi>'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -23,9 +23,9 @@ copyright = u'Asko Soukka <asko.soukka@iki.fi>'
 # built documents.
 #
 # The short X.Y version.
-version = '0.1'
+version = '0.2'
 # The full version, including alpha/beta/rc tags.
-release = '0.1.1'
+release = '0.2.0'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -41,7 +41,7 @@ pygments_style = 'sphinx'
 # html_theme = 'pyramid'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'robotframework-wavelibrary'
+htmlhelp_basename = 'robotframework-selenium2accessibility'
 
 # -- Options for LaTeX output --------------------------------------------------
 
@@ -52,7 +52,7 @@ latex_elements = {
 latex_documents = [
     # (source target file, target latex name, document title,
     #  author, document clas [howto/manual]),
-    ('index', 'robotframework-wavelibrary.tex',
-     u'Robot Framework WAVE-library Documentation',
+    ('index', 'robotframework-selenium2accessibility.tex',
+     u'Robot Framework Accessibility Testing Documentation',
      u'asko.soukka@iki.fi', 'manual'),
 ]
