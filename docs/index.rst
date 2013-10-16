@@ -10,15 +10,7 @@ Libraries
    wavetoolbar
    contrastchecker
 
-Common keywords
----------------
+Common usage
+------------
 
-.. robot_keywords::
-   :source: Accessibility:accessibility.robot
-   :style: minimal
-
-Source
-------
-
-.. robot_source::
-   :source: Accessibility:accessibility.robot
+:download:`See common keyword documentation <accessibility.html>`

@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = [
-    "sphinxcontrib_robotdoc",
-]
+extensions = []
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -25,7 +23,7 @@ copyright = u'Asko Soukka <asko.soukka@iki.fi>'
 # The short X.Y version.
 version = '0.2'
 # The full version, including alpha/beta/rc tags.
-release = '0.2.0'
+release = '0.2.1'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
