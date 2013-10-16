@@ -1,7 +1,7 @@
 WAVE Toolbar library
 ====================
 
-:download:`View keyword documentation <wavetoolbar.html>`.
+:download:`View available keywords <wavetoolbar.html>`.
 
 Include keywords with::
 
