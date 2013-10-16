@@ -43,8 +43,8 @@ Example test
 
    *** Settings ***
 
-   Library  Accessibility.WAVEToolbar
-   Library  Accessibility.ContrastChecker
+   Resource  Accessibility/wavetoolbar.robot
+   Resource  Accessibility/contrastchecker.robot
 
    Suite setup  Run keywords
    ...  Open accessibility test browser  Maximize Browser Window
